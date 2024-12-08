@@ -5,7 +5,7 @@ import { Typography, Box } from "@mui/material";
 
 function App() {
   const checklists = [
-    { title: "Social Media", items: ["Check for brevity", "Add hashtags", "Include a call-to-action"] },
+    { title: "Social Media", items: ["Check for brevity", "Check hashtags and @s", "Check links and UTM parameters", "Include a call-to-action"] },
     { title: "Blog", items: ["Check for brevity", "Optimize for SEO", "Add images"] },
     { title: "Web", items: ["Check for brevity", "Check responsiveness", "Ensure fast load times"] },
     { title: "Print", items: ["Check for brevity", "Check alignment", "Include contact info"] },

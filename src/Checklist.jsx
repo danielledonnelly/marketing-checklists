@@ -13,8 +13,26 @@ function Checklist({ title, items }) {
 
   const explanations = {
     "Check for brevity": "Remove filler and repetition to keep your message concise yet clear.",
-    "Add hashtags": "Include relevant hashtags to improve discoverability on social media.",
-    "Include a call-to-action": "Encourage your audience to take a specific action, such as clicking a link or sharing your post.",
+    "Check hashtags and @s": (
+  <>
+    Make sure any hashtags or tagged accounts are relevant and spelled correctly. Always use {" "}
+    <a 
+      href="https://averment.medium.com/why-does-writing-your-hashtags-in-camel-case-make-them-more-accessible-and-what-are-the-benefits-9e3b8e13e920" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      style={{ color: '#1976d2', textDecoration: 'none' }}
+    >
+      camel case
+    </a> {" "}
+    in your hashtags for accessibility.
+  </>
+),
+    "Check links and UTM parameters": (
+  <>
+    If your post includes a link, confirm that it looks correct and works. If you use UTM parameters, ensure they are properly configured for each social media platform.<p />
+    Don’t forget that links won’t work on Instagram posts! Add them to your bio or Linktree to ensure users can access them easily.
+  </>
+),
   };
 
   return (

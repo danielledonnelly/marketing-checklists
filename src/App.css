@@ -30,7 +30,6 @@ body {
   text-align: left;
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .checklist-title {
@@ -45,7 +44,7 @@ body {
 }
 
 .checklist-item {
-  background-color: #f4f4f4 !important;
+  background-color: #f5f9f9 !important;
   border-radius: 4px;
   overflow: hidden;
 }
