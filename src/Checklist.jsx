@@ -33,6 +33,37 @@ function Checklist({ title, items }) {
     Don’t forget that links won’t work on Instagram posts! Add them to your bio or Linktree to ensure users can access them easily.
   </>
 ),
+"Check your grammar": (
+  <>
+    Look for any potential mistakes in grammar, punctuation, and spelling.<p /> You can use a writing assistant such as  {" "}   <a 
+      href="https://www.grammarly.com/" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      style={{ color: '#1976d2', textDecoration: 'none' }}
+    >
+      Grammarly
+    </a> {" "} to help with this, but it won't detect all errors. 
+
+  </>
+),
+"Check images": (
+  <>
+  Review images carefully, ensure proper sizing for each platform, and add alt text for accessibility.
+
+  </>
+),
+"Get a second opinion": (
+  <>
+  If permitted, send your text and image to {" "}   <a 
+      href="chatgpt.com" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      style={{ color: '#1976d2', textDecoration: 'none' }}
+    >
+      ChatGPT
+    </a> {" "} to review. While it won't catch everything, ChatGPT can often detect minor mistakes.  <p/> Have a co-worker review your post for clarity, tone, and any details you might have overlooked. 
+  </>
+),
   };
 
   return (
