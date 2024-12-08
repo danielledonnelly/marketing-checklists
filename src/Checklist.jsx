@@ -30,7 +30,14 @@ function Checklist({ title, items }) {
     "Check links and UTM parameters": (
   <>
     If your post includes a link, confirm that it looks correct and works. If you use UTM parameters, ensure they are properly configured for each social media platform.<p />
-    Don’t forget that links won’t work on Instagram posts! Add them to your bio or Linktree to ensure users can access them easily.
+    Don’t forget that links won’t work on Instagram posts! Use     <a 
+      href="https://linktr.ee/" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      style={{ color: '#1976d2', textDecoration: 'none' }}
+    >
+      Linktree
+    </a> {" "} to ensure users can access your links easily.
   </>
 ),
 "Check your grammar": (
