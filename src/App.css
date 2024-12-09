@@ -47,7 +47,11 @@ body {
   overflow: hidden;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+  .tagline {
+    display: none !important;
+  }
+
   .checklist-container {
     flex-direction: column; 
     align-items: center;

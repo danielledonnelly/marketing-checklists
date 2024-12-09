@@ -126,7 +126,7 @@ function Checklist({ title, items }) {
     ),
     Metadata: (
       <>
-        Optimize for SEO by including complete and accurate metadata, such as a title and description. If applicable, include an author for blogs.
+        Optimize for SEO by including complete and accurate metadata, such as a title and description. If applicable, include an author as well.
       </>
     ),
   };

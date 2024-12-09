@@ -6,8 +6,8 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { styled } from "@mui/system";
 import { Switch } from "@mui/material";
-import Brightness4Icon from "@mui/icons-material/Brightness4"; // Moon Icon
-import Brightness7Icon from "@mui/icons-material/Brightness7"; // Sun Icon
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
 
 const StyledSwitch = styled(Switch)(({ theme }) => ({
   width: 50,
@@ -20,7 +20,7 @@ const StyledSwitch = styled(Switch)(({ theme }) => ({
       transform: "translateX(22px)",
       color: "#fff",
       "& + .MuiSwitch-track": {
-        backgroundColor: "#313131", 
+        backgroundColor: "#808080",
         opacity: 1,
       },
     },
@@ -39,7 +39,7 @@ const StyledSwitch = styled(Switch)(({ theme }) => ({
   },
   "& .MuiSwitch-track": {
     borderRadius: 26 / 2,
-    backgroundColor: theme.palette.mode === "dark" ? "#313131" : "#313131", 
+    backgroundColor: "#808080",
     opacity: 1,
     transition: theme.transitions.create(["background-color"]),
   },
@@ -79,7 +79,7 @@ function App() {
   const checklists = [
     { title: "Social Media", items: ["Brevity", "Hashtags and @s", "Links and UTM Parameters", "Details", "Grammar", "Images", "Final Review"] },
     { title: "Email", items: ["Brevity", "Hyperlinks and Buttons", "Details", "Grammar", "Images", "Subject", "Mobile Responsiveness", "Send List", "Final Review"] },
-    { title: "Web", items: ["Brevity", "Hyperlinks and Buttons", "Details", "Grammar", "Images", "Metadata", "URL", "Mobile Responsiveness", "Final Review"] },
+    { title: "Web", items: ["Brevity", "Hyperlinks and Buttons", "Details", "Grammar", "Images", "Meta Data", "URL", "Mobile Responsiveness", "Final Review"] },
     { title: "Print", items: ["Brevity", "Grammar", "Details", "Formatting", "Contact Info", "Final Review"] },
   ];
 
@@ -87,9 +87,28 @@ function App() {
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <CssBaseline />
       <Box className="app-container" sx={{ textAlign: "center", padding: "20px" }}>
-        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
-          <Typography variant="h4" gutterBottom>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            marginBottom: "20px",
+          }}
+        >
+          <Typography variant="h4" sx={{ textAlign: "left" }}>
             Marketing Checklists
+          </Typography>
+          <Typography
+            variant="h6"
+            className="tagline"
+            sx={{
+              fontSize: "1.2rem",
+              color: "rgba(200, 200, 200, 0.8)", // Lighter grey color
+              textAlign: "center",
+              flex: 1,
+            }}
+          >
+            Because successful marketing is all about the details.
           </Typography>
           <StyledSwitch
             checked={darkMode}
