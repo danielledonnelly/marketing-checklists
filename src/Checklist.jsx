@@ -1,9 +1,20 @@
 import React, { useState } from "react";
-import { Box, Checkbox, FormControlLabel, Typography, Paper, Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
+import {
+  Box,
+  Checkbox,
+  FormControlLabel,
+  Typography,
+  Paper,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+} from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 function Checklist({ title, items }) {
-  const [checkedItems, setCheckedItems] = useState(Array(items.length).fill(false));
+  const [checkedItems, setCheckedItems] = useState(
+    Array(items.length).fill(false)
+  );
 
   const handleToggle = (index) => {
     const updatedChecked = [...checkedItems];
@@ -12,108 +23,112 @@ function Checklist({ title, items }) {
   };
 
   const explanations = {
-    "Brevity": "Remove filler and repetition to keep your message concise yet clear.",
-    "URL": "Check your URL to ensure it works and is easily readable. A user should be able to tell what the webpage or blog will be about just by reading the URL.",
+    Brevity: "Eliminate filler and redundancy to keep your message clear and concise.",
+    URL: "Verify your URL is functional and easy to read. Users should be able to infer the content of the webpage or blog from the URL itself.",
     "Hashtags and @s": (
-  <>
-    Make sure any hashtags or tagged accounts are relevant and spelled correctly. Always use {" "}
-    <a 
-      href="https://averment.medium.com/why-does-writing-your-hashtags-in-camel-case-make-them-more-accessible-and-what-are-the-benefits-9e3b8e13e920" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      style={{ color: '#1976d2', textDecoration: 'none' }}
-    >
-      camel case
-    </a> {" "}
-    in your hashtags for accessibility.
-  </>
-),
+      <>
+        Ensure all hashtags or tagged accounts are relevant and accurately spelled. Always use{" "}
+        <a
+          href="https://averment.medium.com/why-does-writing-your-hashtags-in-camel-case-make-them-more-accessible-and-what-are-the-benefits-9e3b8e13e920"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#1976d2", textDecoration: "none" }}
+        >
+          camel case
+        </a>{" "}
+        for improved accessibility.
+      </>
+    ),
     "Links and UTM Parameters": (
-  <>
-    If your post includes a link, confirm that it looks correct and works. If you use UTM parameters, ensure they are properly configured for each social media platform.<p />
-    Don’t forget that links won’t work on Instagram posts! Use     <a 
-      href="https://linktr.ee/" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      style={{ color: '#1976d2', textDecoration: 'none' }}
-    >
-      Linktree
-    </a> {" "} to ensure users can access your links easily.
-  </>
-),
-"Grammar": (
-  <>
-    Look for any potential mistakes in grammar, punctuation, and spelling.<p /> You can use a writing assistant such as  {" "}   <a 
-      href="https://www.grammarly.com/" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      style={{ color: '#1976d2', textDecoration: 'none' }}
-    >
-      Grammarly
-    </a> {" "} to help with this, but it won't detect all errors. 
-
-  </>
-),
-"Images": (
-  <>
-  Review images carefully, check to confirm the dimensions are correct, and add alt text for accessibility.
-
-  </>
-),
-
-"Hyperlinks and Buttons": (
-  <>
-    When reviewing hyperlinks or buttons, always verify that they are set to open in a new tab rather than the current page. Ensure that the text of your hyperlink or button is a compelling CTA. <p/> If you use UTM parameters, check to ensure they are present and properly formatted.
-  </>
-),
-
-"Formatting": (
-  <>
-  Check to confirm that the dimensions of your print collateral are correct and that there are no issues with margins, padding, or any other design elements.
-
-  </>
-),
-
-"Contact Info": (
-  <>
-  Check to confirm that any phone numbers or emails included in the material are accurate. If you're ordering business cards, always send the proof to the individual you are ordering for before proceeding.
-
-  </>
-),
-
-"Final Review": (
-  <>
-  If permitted, send your content (including both text and any images) to {" "}   <a 
-      href="chatgpt.com" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      style={{ color: '#1976d2', textDecoration: 'none' }}
-    >
-      ChatGPT
-    </a> {" "} to review. While it won't catch everything, ChatGPT can often detect minor mistakes.  <p/> Have a co-worker review your post for clarity, tone, and any details you might have overlooked. 
-  </>
-),
-"Subject Line": (
-  <>
-  The subject line is the most important part of an email – it's what determines if it gets opened or not! Make it count; ensure your subject line is compelling and relevant.
-  </>
-),
-"Mobile Responsiveness": (
-  <>
-  Make sure your content is mobile-friendly. Whenever you publish a blog, draft a marketing email, or update your site, remember to review the content on a mobile device to ensure everything is formatted correctly.
-  </>
-),
-
-"Send List": (
-  <>
-  Make sure your emails only go to the correct contacts. Confirm that you have an accurate list before using it.
-  </>
-),
-"Meta Data": (
-  <>
-  Make sure you're set up for SEO success with complete and accurate meta data, including a title and a description. If publishing a blog, include an author in the meta data as well.
-  </>
-),
+      <>
+        Check that all links are valid and working as intended. If you use UTM parameters, verify that they are correctly configured for each platform.
+        <p />
+        Remember, links do not work in Instagram posts! Use{" "}
+        <a
+          href="https://linktr.ee/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#1976d2", textDecoration: "none" }}
+        >
+          Linktree
+        </a>{" "}
+        to provide users with easy access to your links.
+      </>
+    ),
+    Grammar: (
+      <>
+        Review your content for errors in grammar, punctuation, and spelling.
+        <p /> Utilize tools like{" "}
+        <a
+          href="https://www.grammarly.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#1976d2", textDecoration: "none" }}
+        >
+          Grammarly
+        </a>{" "}
+        for assistance, but note that it won't catch every mistake.
+      </>
+    ),
+    Images: (
+      <>
+        Examine images to ensure dimensions are appropriate. Add alt text for accessibility.
+      </>
+    ),
+    "Hyperlinks and Buttons": (
+      <>
+        Confirm that all hyperlinks and buttons contain compelling CTAs. These should be set to open in a new tab when clicked.<p /> If you use UTM parameters, verify that they are correctly configured.
+      </>
+    ),
+    Formatting: (
+      <>
+        Ensure the dimensions of your print materials are accurate and that margins, padding, and other design elements are consistent.
+      </>
+    ),
+    "Contact Info": (
+      <>
+        Verify all contact information, such as phone numbers and email addresses, is correct. For business cards, always send the proof to the intended recipient before finalizing.
+      </>
+    ),
+    Details: (
+      <>
+        Double-check all details for accuracy, including dates, addresses, numbers, and any other key information.
+      </>
+    ),
+    "Final Review": (
+      <>
+        If allowed, submit your content to{" "}
+        <a
+          href="chatgpt.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#1976d2", textDecoration: "none" }}
+        >
+          ChatGPT
+        </a>{" "}
+        for review. While it won’t catch everything, it can help identify minor errors in text and images. <p /> You can also request feedback from a colleague to refine your messaging further.
+      </>
+    ),
+    Subject: (
+      <>
+        The subject line is the most important part of any email—it's what determines if it gets opened or not! Make it count.
+      </>
+    ),
+    "Mobile Responsiveness": (
+      <>
+        Ensure your content displays correctly on mobile devices. Test blogs, emails, and website updates on mobile to confirm proper formatting.
+      </>
+    ),
+    "Send List": (
+      <>
+        Verify your email list is accurate and limited to the intended recipients.
+      </>
+    ),
+    Metadata: (
+      <>
+        Optimize for SEO by including complete and accurate metadata, such as a title and description. If applicable, include an author for blogs.
+      </>
+    ),
   };
 
   return (
@@ -124,24 +139,30 @@ function Checklist({ title, items }) {
       <Box className="checklist-items">
         {items.map((item, index) => (
           <Accordion key={index} className="checklist-item">
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls={`panel${index}-content`} id={`panel${index}-header`}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls={`panel${index}-content`}
+              id={`panel${index}-header`}
+            >
               <FormControlLabel
                 control={
                   <Checkbox
                     checked={checkedItems[index]}
                     onChange={(e) => {
-                      e.stopPropagation(); // Prevent the checkbox click from toggling the accordion
+                      e.stopPropagation();
                       handleToggle(index);
                     }}
                     color="primary"
                   />
                 }
                 label={item}
-                onClick={(e) => e.stopPropagation()} // Prevent label click from toggling the accordion
+                onClick={(e) => e.stopPropagation()}
               />
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>{explanations[item] || "No additional information available."}</Typography>
+              <Typography>
+                {explanations[item] || "No additional information available."}
+              </Typography>
             </AccordionDetails>
           </Accordion>
         ))}
