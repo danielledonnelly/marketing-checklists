@@ -5,10 +5,10 @@ import { Typography, Box } from "@mui/material";
 
 function App() {
   const checklists = [
-    { title: "Social Media", items: ["Check for brevity", "Check hashtags and @s", "Check links and UTM parameters", "Check your grammar", "Check images", "Get a second opinion"] },
-    { title: "Blog", items: ["Check for brevity", "Optimize for SEO", "Add images"] },
-    { title: "Web", items: ["Check for brevity", "Check responsiveness", "Ensure fast load times"] },
-    { title: "Print", items: ["Check for brevity", "Check alignment", "Include contact info"] },
+    { title: "Social Media", items: ["Brevity", "Hashtags and @s", "Links and UTM parameters", "Grammar", "Images", "Final Review"] },
+    { title: "Email", items: ["Brevity", "Hyperlinks and Buttons", "Grammar", "Images", "Subject line", "Mobile Responsiveness", "Send List", "Final Review"] },
+    { title: "Web", items: ["Brevity", "Hyperlinks and Buttons", "Grammar", "Images", "Meta Data", "URL", "Mobile Responsiveness", "Final Review"] },
+    { title: "Print", items: ["Brevity", "Grammar", "Formatting", "Contact Info", "Final Review"] },
   ];
 
   return (
