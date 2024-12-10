@@ -1,8 +1,4 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# [Marketing Checklists ](https://marketing-checklists.pages.dev/)
+## Because great marketing is all about the details
+✦ Four dynamic checklists designed to help you review your marketing materials
+<br>✦ Reminders of important details to check for social media, emails, web, and print
