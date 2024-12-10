@@ -111,7 +111,7 @@ function App() {
               display: { xs: "none", md: "block" },
             }}
           >
-            Because successful marketing is all about the details.
+            Because great marketing is all about the details.
           </Typography>
           <StyledSwitch
             checked={darkMode}
