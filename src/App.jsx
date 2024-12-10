@@ -81,7 +81,7 @@ function App() {
   const checklists = [
     { title: "Social Media", items: ["Brevity", "Hashtags and @s", "Links and UTM Parameters", "Details", "Grammar", "Images", "Final Review"] },
     { title: "Email", items: ["Brevity", "Hyperlinks and Buttons", "Details", "Grammar", "Images", "Subject", "Mobile Responsiveness", "Send List", "Final Review"] },
-    { title: "Web", items: ["Brevity", "Hyperlinks and Buttons", "Details", "Grammar", "Images", "Meta Data", "URL", "Mobile Responsiveness", "Final Review"] },
+    { title: "Web", items: ["Brevity", "Hyperlinks and Buttons", "Details", "Grammar", "Images", "Metadata", "URL", "Mobile Responsiveness", "Final Review"] },
     { title: "Print", items: ["Brevity", "Grammar", "Details", "Formatting", "Contact Info", "Final Review"] },
   ];
 
