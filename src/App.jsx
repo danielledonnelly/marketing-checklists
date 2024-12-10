@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Checklist from "./Checklist";
 import "./App.css";
 import { Typography, Box } from "@mui/material";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { ThemeProvider, createTheme, useTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { styled } from "@mui/system";
 import { Switch } from "@mui/material";
@@ -57,7 +57,7 @@ function App() {
       },
       text: {
         primary: "#ffffff",
-        secondary: "#b0b0b0",
+        secondary: "rgba(200, 200, 200, 0.8)",
       },
     },
   });
@@ -76,6 +76,8 @@ function App() {
     },
   });
 
+  const theme = darkMode ? darkTheme : lightTheme;
+
   const checklists = [
     { title: "Social Media", items: ["Brevity", "Hashtags and @s", "Links and UTM Parameters", "Details", "Grammar", "Images", "Final Review"] },
     { title: "Email", items: ["Brevity", "Hyperlinks and Buttons", "Details", "Grammar", "Images", "Subject", "Mobile Responsiveness", "Send List", "Final Review"] },
@@ -84,7 +86,7 @@ function App() {
   ];
 
   return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       <Box className="app-container" sx={{ textAlign: "center", padding: "20px" }}>
         <Box
@@ -103,9 +105,10 @@ function App() {
             className="tagline"
             sx={{
               fontSize: "1.2rem",
-              color: "rgba(200, 200, 200, 0.8)", 
+              color: theme.palette.text.secondary,
               textAlign: "center",
               flex: 1,
+              display: { xs: "none", md: "block" },
             }}
           >
             Because successful marketing is all about the details.
