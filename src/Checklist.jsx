@@ -131,6 +131,15 @@ function Checklist({ title, items }) {
     ),
   };
 
+  const completionMessages = {
+    "Social Media": "Post away!",
+    Email: "Send it off!",
+    Web: "Hit publish!",
+    Print: "Get it printed!",
+  };
+
+  const isComplete = checkedItems.every((checked) => checked);
+
   return (
     <Paper elevation={3} className="checklist">
       <Typography variant="h6" gutterBottom className="checklist-title">
@@ -167,6 +176,20 @@ function Checklist({ title, items }) {
           </Accordion>
         ))}
       </Box>
+      {isComplete && (
+  <Typography
+    variant="h6" 
+    sx={{
+      marginTop: "20px",
+      color: "text.primary",
+      textAlign: "center",
+      fontWeight: "bold", 
+      fontSize: "1.5rem", 
+    }}
+  >
+    *･ﾟ✧ {completionMessages[title]} ✧･ﾟ*
+  </Typography>
+)}
     </Paper>
   );
 }

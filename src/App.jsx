@@ -103,7 +103,7 @@ function App() {
             className="tagline"
             sx={{
               fontSize: "1.2rem",
-              color: "rgba(200, 200, 200, 0.8)", // Lighter grey color
+              color: "rgba(200, 200, 200, 0.8)", 
               textAlign: "center",
               flex: 1,
             }}
